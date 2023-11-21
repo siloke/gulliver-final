@@ -13,6 +13,11 @@ const StyledButton = styled.button`
     backdrop-filter: blur(2px);
     border-radius: 4px;
     transition: 0.3s;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
 `
 
 const Button = ({children}) => {

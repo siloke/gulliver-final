@@ -1,4 +1,4 @@
-import Button from "./shared/Button/Button"
+import Destinos from "./components/Destinos/Destinos"
 import Hero from "./components/Hero/Hero"
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
   return (
     <>
       <Hero />
+      <Destinos />
     </>
   )
 }
