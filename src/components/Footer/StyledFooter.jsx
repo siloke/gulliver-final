@@ -40,9 +40,10 @@ export const StyledFooter = styled.footer`
     display: flex;
     flex-direction: column;
     width: 50%;
-    align-items: center;
+    align-content: center;
     justify-content: center;
     gap: 24px;
+    text-align: center;
   }
 
   .content1, .content2 a {
