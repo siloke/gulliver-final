@@ -1,4 +1,3 @@
-
 const LogoPreto = () => {
     return (
         <>

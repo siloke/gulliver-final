@@ -44,7 +44,7 @@ const Destinos = () => {
     return ( 
         <>
             {/* Eliminar padding dessa box (TEMPORARIO) */}
-            <Box margin={"0 auto"} width={1} maxWidth={"1348px"} padding={"50px 0"} >
+            <Box margin={"0 auto"} width={1} maxWidth={"1348px"}>
                 <Flex justifyContent={"space-between"} alignItems={"center"}>
                     <Box>
                         <Topic size="18px" weight="500" lineh="24px">Em alta</Topic>
