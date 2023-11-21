@@ -52,7 +52,12 @@ const Destinos = () => {
                     </Box>
                     <FlexGap justifyContent={"space-between"} gap="8px">
                         {
-                            regioes.map((item) => <FilterButton active={item.isActive} key={item.regiao}>{item.regiao}</FilterButton>)
+                            regioes.map((item) =>
+                                <FilterButton
+                                    active={item.isActive}
+                                    key={item.regiao}>
+                                    {item.regiao}
+                                </FilterButton>)
                         }
                     </FlexGap>
                 </Flex>
