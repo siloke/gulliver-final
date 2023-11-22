@@ -42,7 +42,7 @@ const Hero = ({city, imgUrl}) => {
                     <FlexGap maxWidth={"600px"} flexDirection={"column"} alignItems={"center"} margin={"0 auto"} gap={"50px"}>
                         <Box>
                             {
-                                city ? 
+                                city ?
                                 <>
                                     <StyledH1>{city.cityName}</StyledH1>
                                     <StyledSubtitle>{city.description}</StyledSubtitle>
