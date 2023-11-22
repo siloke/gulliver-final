@@ -14,7 +14,7 @@ const StyledHeroSection = styled.section`
 
 const StyledH1 = styled.h1`
     font-weight: 700;
-    font-size: 64px;
+    font-size: 50px;
     line-height: 77px;
     text-align: center;
     color: #FFFFFF
@@ -22,7 +22,7 @@ const StyledH1 = styled.h1`
 
 const StyledSubtitle = styled.p`
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 32px;
     text-align: center;
     color: #FFFFFF;
@@ -34,10 +34,10 @@ const Hero = ({city, imgUrl}) => {
     return ( 
         <StyledHeroSection imgUrl={imgUrl}>
             <Box margin={"0 auto"} width={1} maxWidth={"1348px"}>
-                <Flex justifyContent={"space-between"} flexDirection={"column"} height={"100vh"}>
-                    <Flex justifyContent={"space-between"} alignItems={"center"} mt={"12px"}>
+                <Flex justifyContent={"space-between"} flexDirection={"column"} minHeight={"100vh"}>
+                    <Flex justifyContent={"space-between"} px={20} alignItems={"center"} mt={"12px"} flexWrap={'wrap'}>
                         <Logo />
-                        <Button>{city ? "Ver hospedagens" : "Ver destinos"}</Button>
+                        <a href="#destinos"><Button>{city ? "Ver hospedagens" : "Ver destinos"}</Button></a>
                     </Flex>
                     <FlexGap maxWidth={"600px"} flexDirection={"column"} alignItems={"center"} margin={"0 auto"} gap={"50px"}>
                         <Box>
@@ -54,7 +54,7 @@ const Hero = ({city, imgUrl}) => {
                                 </>
                             }
                         </Box>
-                        <a href="#"><Button>{city ? "Ver hospedagens" : "Ver destinos"}</Button></a>
+                        <a href="#destinos"><Button>{city ? "Ver hospedagens" : "Ver destinos"}</Button></a>
                     </FlexGap>
                     <Flex justifyContent={"center"}> 
                         <Scroll />

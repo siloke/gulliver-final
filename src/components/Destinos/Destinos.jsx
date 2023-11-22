@@ -50,17 +50,23 @@ const Destinos = () => {
 
     return ( 
         <>
-            <Box margin={"40px auto"} width={1} maxWidth={"1348px"}>
+            <Box margin={"40px auto"} px={20} width={1} maxWidth={"1348px"}>
                 <Flex justifyContent={"space-between"} alignItems={"center"} flexWrap={"wrap"}>
                     <Box >
                         <Topic size="18px" weight="500" lineh="24px">Em alta</Topic>
-                        <Topic size="32px" weight="700" lineh="40px" color="#030E0A">Principais Destinos</Topic>
+                        <Topic size="32px" weight="700" lineh="40px" color="#030E0A" id="destinos">Principais Destinos</Topic>
                     </Box>
-                    <FlexGap justifyContent={"space-between"} gap="8px">
+                    <FlexGap justifyContent={"space-between"} gap="8px" flexWrap={'wrap'}>
                         {
                             regioes.map((item) =>
                                 <FilterButton
-                                onClick={() => filterByRegion(item.regiao)}
+                                onClick={() => {
+                                    regioes.map((item) => {
+                                        item.isActive = false
+                                    })
+                                    filterByRegion(item.regiao)
+                                    item.isActive = true
+                                }}
                                 active={item.isActive}
                                 key={item.regiao}
                                 >

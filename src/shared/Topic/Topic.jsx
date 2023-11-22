@@ -5,11 +5,12 @@ const StyledTopic = styled.h2`
     font-weight: ${({weight}) => weight};
     line-height: ${({lineh}) => lineh};
     font-size: ${({size}) => size};
+    margin: 10px 0;
 `
 
-const Topic = ({color, weight, size, lineh, children}) => {
+const Topic = ({color, weight, size, lineh, children, ... props}) => {
     return ( 
-        <StyledTopic color={color} weight={weight} size={size} lineh={lineh}>{children}</StyledTopic>
+        <StyledTopic color={color} weight={weight} size={size} lineh={lineh} {...props}>{children}</StyledTopic>
     );
 }
  

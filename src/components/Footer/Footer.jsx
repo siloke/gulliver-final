@@ -14,8 +14,8 @@ const StyledFooter = styled.footer`
     return (
         <>
             <StyledFooter>
-                <Box margin={"0 auto"} width={1} maxWidth={"1348px"} padding={"50px 0"}>
-                    <Flex justifyContent={"space-between"}>
+                <Flex margin={"0 auto"} width={1} maxWidth={"1348px"} padding={"50px 20px"}>
+                    <FlexGap justifyContent={"space-between"} gap={'20px'}>
                         <FlexGap maxWidth={"40%"} flexDirection={"column"} gap="20px">
                             <LogoPreto/>
                             <h4>Gulliver Traveler · Venda de passagens aéreas</h4>
@@ -24,8 +24,8 @@ const StyledFooter = styled.footer`
                             <a>Termos & Privacidade</a>
                         </FlexGap>
 
-                        <Flex maxWidth={"35%"} alignItems={"center"}>
-                            <FlexGap gap="20px">
+                        <Flex alignItems={""} minWidth={'35%'} >
+                            <FlexGap gap="20px" flexDirection={['column', 'row']}>
                                 <FlexGap flexDirection={"column"} gap="6px">
                                     <h3>Links úteis</h3>
                                     <a>Sobre nós <BsArrowUpRight /></a>
@@ -42,8 +42,8 @@ const StyledFooter = styled.footer`
                                 </FlexGap>
                             </FlexGap>
                         </Flex>
-                    </Flex>
-                </Box>
+                    </FlexGap>
+                </Flex>
             </StyledFooter>
         </>
     )
