@@ -6,7 +6,9 @@ import { FlexGap } from "../../shared/FlexGap/FlexGap";
 import Scroll from "../../shared/Scroll/Scroll";
 
 const StyledHeroSection = styled.section`
-    background-image: url(./heroHomeBg.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${({imgUrl}) => imgUrl});
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
 `
 
@@ -27,21 +29,32 @@ const StyledSubtitle = styled.p`
     opacity: 0.7;
 `
 
-const Hero = () => {
+const Hero = ({city, imgUrl}) => {
+
     return ( 
-        <StyledHeroSection>
+        <StyledHeroSection imgUrl={imgUrl}>
             <Box margin={"0 auto"} width={1} maxWidth={"1348px"}>
                 <Flex justifyContent={"space-between"} flexDirection={"column"} height={"100vh"}>
                     <Flex justifyContent={"space-between"} alignItems={"center"} mt={"12px"}>
                         <Logo />
-                        <Button>Ver destinos</Button>
+                        <Button>{city ? "Ver hospedagens" : "Ver destinos"}</Button>
                     </Flex>
                     <FlexGap maxWidth={"600px"} flexDirection={"column"} alignItems={"center"} margin={"0 auto"} gap={"50px"}>
                         <Box>
-                            <StyledH1>Salve suas férias com o Gulliver!</StyledH1>
-                            <StyledSubtitle>Pensamos em tudo para você, desde passagens aéreas até hospedagem e guia turístico no seu destino preferido</StyledSubtitle>
+                            {
+                                city ? 
+                                <>
+                                    <StyledH1>{city.cityName}</StyledH1>
+                                    <StyledSubtitle>{city.description}</StyledSubtitle>
+                                </>
+                                :
+                                <>
+                                    <StyledH1>Salve suas férias com o Gulliver!</StyledH1>
+                                    <StyledSubtitle>Pensamos em tudo para você, desde passagens aéreas até hospedagem e guia turístico no seu destino preferido</StyledSubtitle>                    
+                                </>
+                            }
                         </Box>
-                        <a href="#"><Button>Ver destinos</Button></a>
+                        <a href="#"><Button>{city ? "Ver hospedagens" : "Ver destinos"}</Button></a>
                     </FlexGap>
                     <Flex justifyContent={"center"}> 
                         <Scroll />

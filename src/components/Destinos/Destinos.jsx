@@ -7,6 +7,7 @@ import FilterButton from "../../shared/FilterButton/FilterButton";
 import Card from "../../shared/Card/Card";
 import cityListData from "../../data/destinos";
 import listaRegioes from "../../data/listaRegioes";
+import { Link } from "react-router-dom";
 
 const StyledDestinosSection = styled.section`
     width: 100%;
@@ -71,16 +72,18 @@ const Destinos = () => {
                 <StyledGrid>
                         {
                             cityList.map((city) => 
-                            <Card 
-                            key={city.id}
-                            imageUrl={city.imageURL}
-                            active={city.availability}
-                            cityName={city.cityName}
-                            cityRegion={city.cityRegion}
-                            minimumCost={city.minimumCost}
-                            >
-                            {city.availability}
-                            </Card>)
+                            <Link to={`/cidade/${city.id}`} >
+                                <Card 
+                                key={city.id}
+                                imageUrl={city.imageURL}
+                                active={city.availability}
+                                cityName={city.cityName}
+                                cityRegion={city.cityRegion}
+                                minimumCost={city.minimumCost}
+                                >
+                                {city.availability}
+                                </Card>
+                            </Link>)
                         }
                 </StyledGrid>
             </Box>

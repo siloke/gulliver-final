@@ -7,6 +7,8 @@ const cityListData = [
         availability: true,
         url: "./sao-paulo.html",
         imageURL: "./cidades/sao-paulo.png",
+        background: "./cidadesBg/heroSaoPauloBg.png",
+        description: "São Paulo é uma cidade vibrante e diversa, considerada o coração econômico do Brasil.",
     },
     {
         id: 2,
@@ -16,6 +18,8 @@ const cityListData = [
         availability: false,
         url: "#",
         imageURL: "./cidades/rio.png",
+        background: "./cidadesBg/heroRioDeJaneiro.jpg",
+        description: "São Paulo é uma cidade vibrante e diversa, considerada o coração econômico do Brasil.",
     },
     {
         id: 3,
@@ -25,6 +29,8 @@ const cityListData = [
         availability: false,
         url: "#",
         imageURL: "./cidades/salvador.png",
+        background: "./cidadesBg/heroSalvador.jpg",
+        description: "São Paulo é uma cidade vibrante e diversa, considerada o coração econômico do Brasil.",
     },
     {
         id: 4,
@@ -34,15 +40,19 @@ const cityListData = [
         availability: false,
         url: "#",
         imageURL: "./cidades/maceio.png",
+        background: "./cidadesBg/heroMaceio.jpg",
+        description: "São Paulo é uma cidade vibrante e diversa, considerada o coração econômico do Brasil.",
     },
     {
         id: 5,
-        cityName: "São Luiz",
+        cityName: "São Luís",
         cityRegion: "Nordeste",
         minimumCost: "R$ 10.000,00",
         availability: false,
         url: "#",
         imageURL: "./cidades/sao-luiz.png",
+        background: "./cidadesBg/heroSaoLuiz.jpg",
+        description: "São Paulo é uma cidade vibrante e diversa, considerada o coração econômico do Brasil.",
     },
     {
         id: 6,
@@ -52,6 +62,8 @@ const cityListData = [
         availability: false,
         url: "#",
         imageURL: "./cidades/natal.png",
+        background: "./cidadesBg/heroNatal.jpg",
+        description: "São Paulo é uma cidade vibrante e diversa, considerada o coração econômico do Brasil.",
     },
     {
         id: 7,
@@ -61,6 +73,8 @@ const cityListData = [
         availability: false,
         url: "#",
         imageURL: "./cidades/aracaju.png",
+        background: "./cidadesBg/heroAracaju.jpg",
+        description: "São Paulo é uma cidade vibrante e diversa, considerada o coração econômico do Brasil.",
     },
     {
         id: 8,
@@ -70,6 +84,8 @@ const cityListData = [
         availability: false,
         url: "#",
         imageURL: "./cidades/fortaleza.png",
+        background: "./cidadesBg/heroFortaleza.jpg",
+        description: "São Paulo é uma cidade vibrante e diversa, considerada o coração econômico do Brasil.",
     },
 ];
 

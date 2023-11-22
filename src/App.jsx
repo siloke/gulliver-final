@@ -1,15 +1,21 @@
-import Destinos from "./components/Destinos/Destinos"
-import Hero from "./components/Hero/Hero"
 import Footer from "./components/Footer/Footer.jsx"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Cidade from "./screens/Cidade.jsx"
+import Home from "./screens/Home.jsx"
 
 
 function App() {
 
   return (
     <>
-        <Hero />
-        <Destinos />
-        <Footer />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/cidade/:id" element={<Cidade />}></Route>
+            <Route path="*" element={<><h1>Not Found</h1></>}></Route>
+          </Routes>
+          <Footer />
+        </BrowserRouter>
     </>
   )
 }
